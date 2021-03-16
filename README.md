@@ -4,6 +4,13 @@ Node.js application parts
 
 ## DEVELOPMENT GUIDE
 
+Setup:
+
+```
+$ npm i -g yarn lerna
+$ lerna bootstrap
+```
+
 Test projects:
 
 ```
