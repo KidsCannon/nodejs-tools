@@ -5,12 +5,24 @@
     "packages/*",
     "examples/*"
   ],
+  "scripts": {
+    "lint": "eslint .",
+    "typecheck": "lerna exec -- yarn tsc -p . -noEmit"
+  },
   "devDependencies": {
+    "@types/jest": "^26.0.20",
+    "@types/node": "^14.14.35",
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
     "eslint": "^7.22.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "jest": "^26.6.3",
     "lerna": "^4.0.0",
     "npm-check-updates": "^11.3.0",
     "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
+    "ts-jest": "^26.5.3",
     "typescript": "^4.2.3"
   }
 }
