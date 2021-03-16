@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/typeghost/nodex/issues"
   },
-  "homepage": "https://github.com/typeghost/nodex#readme"
+  "homepage": "https://github.com/typeghost/nodex#readme",
+  "dependencies": {
+    "mysql2": "^2.2.5"
+  }
 }
