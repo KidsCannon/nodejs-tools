@@ -1,20 +1,19 @@
 {
-  "name": "@typeghost/nodex-mysql-migrate",
+  "name": "@typeghost/nodex-mysql-migrate-cli",
   "version": "0.0.0",
-  "description": "MySQL schema migration",
+  "description": "MySQL schema migration CLI",
   "keywords": [],
-  "homepage": "https://github.com/typeghost/nodex#readme",
-  "bugs": {
-    "url": "https://github.com/typeghost/nodex/issues"
-  },
   "author": "Takatoshi Matsumoto <toqoz403@gmail.com>",
   "license": "MIT",
-  "main": "dist/lib/index.js",
+  "main": "lib/nodex-mysql-migrate-cli.js",
+  "bin": {
+    "nodex-mysql-migrate": "dist/bin/nodex-mysql-migrate-cli.js"
+  },
   "directories": {
     "test": "dist/__tests__"
   },
   "files": [
-    "dist/lib/"
+    "dist/bin/"
   ],
   "publishConfig": {
     "access": "public"
@@ -28,7 +27,8 @@
     "build": "tsc -b",
     "clean": "rimraf dist"
   },
-  "dependencies": {
-    "mysql2": "^2.2.5"
-  }
+  "bugs": {
+    "url": "https://github.com/typeghost/nodex/issues"
+  },
+  "homepage": "https://github.com/typeghost/nodex#readme"
 }
