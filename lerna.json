@@ -2,13 +2,7 @@
   "version": "0.0.0",
   "npmClient": "yarn",
   "useWorkspaces": true,
-  "packages": [
-    "packages/*",
-    "examples/*"
-  ],
+  "packages": ["packages/*", "examples/*"],
   "includeMergedTags": true,
-  "ignoreChanges": [
-    "**/test/**",
-    "**/*.md"
-  ]
+  "ignoreChanges": ["**/test/**", "**/*.md"]
 }
