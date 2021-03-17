@@ -1,3 +1,5 @@
-describe('@typeghost/nodex-mysql-migrate-cli', () => {
-  it('needs tests')
+describe('migrate', () => {
+  it('test', () => {
+    console.log('test')
+  })
 })
