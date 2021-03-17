@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "format:fix": "prettier --write .",
     "format:check": "prettier --check .",
-    "type:check": "lerna exec -- yarn tsc -p . -noEmit"
+    "type:check": "lerna exec --stream -- yarn tsc -p . -noEmit"
   },
   "devDependencies": {
     "@types/jest": "^26.0.20",
