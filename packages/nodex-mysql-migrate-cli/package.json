@@ -32,6 +32,7 @@
   },
   "homepage": "https://github.com/typeghost/nodex#readme",
   "dependencies": {
+    "@typeghost/nodex-mysql-migrate": "0.0.0",
     "arg": "^5.0.0"
   }
 }

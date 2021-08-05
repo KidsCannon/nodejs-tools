@@ -29,6 +29,10 @@
     "clean": "rimraf dist"
   },
   "dependencies": {
+    "crc": "^3.8.0",
     "mysql2": "^2.2.5"
+  },
+  "devDependencies": {
+    "@types/crc": "^3.4.0"
   }
 }
