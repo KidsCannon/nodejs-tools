@@ -1,13 +1,13 @@
 {
-  "name": "@typeghost/nodex-mysql-migrate-cli",
+  "name": "@typeghost/excavator-mysql-migrate-cli",
   "version": "0.0.0",
   "description": "MySQL schema migration CLI",
   "keywords": [],
   "author": "Takatoshi Matsumoto <toqoz403@gmail.com>",
   "license": "MIT",
-  "main": "lib/nodex-mysql-migrate-cli.js",
+  "main": "lib/excavator-mysql-migrate-cli.js",
   "bin": {
-    "nodex-mysql-migrate": "dist/bin/nodex-mysql-migrate-cli.js"
+    "excavator-mysql-migrate": "dist/bin/excavator-mysql-migrate-cli.js"
   },
   "directories": {
     "test": "dist/__tests__"
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/typeghost/nodex.git"
+    "url": "git+https://github.com/typeghost/excavator.git"
   },
   "scripts": {
     "test": "jest",
@@ -28,11 +28,11 @@
     "clean": "rimraf dist"
   },
   "bugs": {
-    "url": "https://github.com/typeghost/nodex/issues"
+    "url": "https://github.com/typeghost/excavator/issues"
   },
-  "homepage": "https://github.com/typeghost/nodex#readme",
+  "homepage": "https://github.com/typeghost/excavator#readme",
   "dependencies": {
-    "@typeghost/nodex-mysql-migrate": "0.0.0",
+    "@typeghost/excavator-mysql-migrate": "0.0.0",
     "arg": "^5.0.0"
   }
 }

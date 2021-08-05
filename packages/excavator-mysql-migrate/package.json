@@ -1,11 +1,11 @@
 {
-  "name": "@typeghost/nodex-mysql-migrate",
+  "name": "@typeghost/excavator-mysql-migrate",
   "version": "0.0.0",
   "description": "MySQL schema migration",
   "keywords": [],
-  "homepage": "https://github.com/typeghost/nodex#readme",
+  "homepage": "https://github.com/typeghost/excavator#readme",
   "bugs": {
-    "url": "https://github.com/typeghost/nodex/issues"
+    "url": "https://github.com/typeghost/excavator/issues"
   },
   "author": "Takatoshi Matsumoto <toqoz403@gmail.com>",
   "license": "MIT",
@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/typeghost/nodex.git"
+    "url": "git+https://github.com/typeghost/excavator.git"
   },
   "scripts": {
     "test": "jest",

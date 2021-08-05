@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import path from 'path'
-import { create, drop, migrate } from '@typeghost/nodex-mysql-migrate'
+import { create, drop, migrate } from '@typeghost/excavator-mysql-migrate'
 import { getCreateOptions } from './get-create-options'
 import { getGlobalOptions } from './get-global-options'
 
