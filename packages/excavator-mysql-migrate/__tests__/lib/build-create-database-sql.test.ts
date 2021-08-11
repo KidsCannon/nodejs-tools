@@ -1,25 +1,16 @@
 import { buildCreateDatabaseSql } from '../../lib/build-create-database-sql'
 
 describe('buildCreateDatabaseSql', () => {
-  const database = 'test'
-  const config = {
-    host: 'localhost',
-    port: 8080,
-    user: 'root',
-    password: '',
-    database: database,
-  }
-
-  it('should return values that are not set when `characterSet` and `collate` are not set in create config', () => {
+  it('should return values that are not set when `characterSet` and `collate` are not set in create config', async () => {
     const createConfig = {
       characterSet: '',
       collate: '',
     }
 
-    const [sql, values] = buildCreateDatabaseSql(config, createConfig)
+    const [sql, values] = buildCreateDatabaseSql('test', createConfig)
 
     expect(sql).toEqual(`CREATE DATABASE ??`)
-    expect(values).toEqual([database])
+    expect(values).toEqual(['test'])
   })
 
   it('should return values that are set when `characterSet` is set in create config', () => {
@@ -29,10 +20,10 @@ describe('buildCreateDatabaseSql', () => {
       collate: '',
     }
 
-    const [sql, values] = buildCreateDatabaseSql(config, createConfig)
+    const [sql, values] = buildCreateDatabaseSql('test', createConfig)
 
     expect(sql).toEqual(`CREATE DATABASE ?? CHARACTER SET ??`)
-    expect(values).toEqual([database, characterSet])
+    expect(values).toEqual(['test', characterSet])
   })
 
   it('should return values that are set when `characterSet` and `collate` set in create config', () => {
@@ -43,9 +34,9 @@ describe('buildCreateDatabaseSql', () => {
       collate: collate,
     }
 
-    const [sql, values] = buildCreateDatabaseSql(config, createConfig)
+    const [sql, values] = buildCreateDatabaseSql('test', createConfig)
 
     expect(sql).toEqual(`CREATE DATABASE ?? CHARACTER SET ?? COLLATE ??`)
-    expect(values).toEqual([database, characterSet, collate])
+    expect(values).toEqual(['test', characterSet, collate])
   })
 })

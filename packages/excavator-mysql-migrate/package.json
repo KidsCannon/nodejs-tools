@@ -10,6 +10,7 @@
   "author": "Takatoshi Matsumoto <toqoz403@gmail.com>",
   "license": "MIT",
   "main": "dist/lib/index.js",
+  "types": "dist/lib/index.d.js",
   "directories": {
     "test": "dist/__tests__"
   },
@@ -24,13 +25,14 @@
     "url": "git+https://github.com/typeghost/excavator.git"
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest --verbose",
     "build": "tsc -b",
     "clean": "rimraf dist"
   },
   "dependencies": {
     "crc": "^3.8.0",
-    "mysql2": "^2.2.5"
+    "mysql2": "^2.2.5",
+    "testcontainers": "^7.18.2"
   },
   "devDependencies": {
     "@types/crc": "^3.4.0"

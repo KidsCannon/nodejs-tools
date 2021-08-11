@@ -143,29 +143,29 @@ describe('getGlobalOptions', () => {
         extra: extra,
       })
     })
+  })
 
-    describe('when `--host` and `port` and `password` are not passed as arguments', () => {
-      it('should return value with the default value set', () => {
-        const extra = ['migrate']
-        const user = 'root'
-        const database = 'test'
-        // default value sets
-        const host = 'localhost'
-        const port = 8080
-        const password = ''
+  describe('when `--host` and `port` and `password` are not passed as arguments', () => {
+    it('should return value with the default value set', () => {
+      const extra = ['migrate']
+      const user = 'root'
+      const database = 'test'
+      // default value sets
+      const host = 'localhost'
+      const port = 3306
+      const password = ''
 
-        const argv = [...extra, '--user', user, '--database', database]
+      const argv = [...extra, '--user', user, '--database', database]
 
-        const opts = getGlobalOptions(argv)
+      const opts = getGlobalOptions(argv)
 
-        expect(opts).toEqual({
-          host: host,
-          port: port,
-          user: user,
-          password: password,
-          database: database,
-          extra: extra,
-        })
+      expect(opts).toEqual({
+        host: host,
+        port: port,
+        user: user,
+        password: password,
+        database: database,
+        extra: extra,
       })
     })
   })

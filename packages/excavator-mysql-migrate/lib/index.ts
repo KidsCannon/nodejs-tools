@@ -10,7 +10,7 @@ import { StopWatch } from './stop-watch'
 
 export const create = async (config: ConnectionConfig, createConfig: CreateDatabaseConfig): Promise<void> => {
   await new MysqlInvoker(config).invoke(async (conn) => {
-    const [sql, values] = buildCreateDatabaseSql(config, createConfig)
+    const [sql, values] = buildCreateDatabaseSql(config.database, createConfig)
     await conn.query(sql, values)
   })
 }

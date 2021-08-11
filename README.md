@@ -14,17 +14,17 @@ $ lerna bootstrap
 Test projects:
 
 ```
-$ lerna run test --stream
+$ yarn test
 ```
 
 Build projects:
 
 ```
-$ lerna run build --stream
+$ yarn build
 ```
 
 Clean project build files:
 
 ```
-$ lerna run clean --stream
+$ yarn clean
 ```

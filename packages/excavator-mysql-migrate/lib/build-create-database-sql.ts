@@ -1,11 +1,11 @@
-import { ConnectionConfig, CreateDatabaseConfig } from './types'
+import { CreateDatabaseConfig } from './types'
 
 export const buildCreateDatabaseSql = (
-  config: ConnectionConfig,
+  database: string,
   createConfig: CreateDatabaseConfig,
 ): [sql: string, values: any[]] => {
   const sql = [`CREATE DATABASE ??`]
-  const values = [config.database]
+  const values = [database]
 
   if (createConfig.characterSet) {
     sql.push('CHARACTER SET ??')

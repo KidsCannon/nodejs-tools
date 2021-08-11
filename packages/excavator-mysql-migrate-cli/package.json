@@ -23,7 +23,7 @@
     "url": "git+https://github.com/typeghost/excavator.git"
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest --verbose",
     "build": "tsc -b",
     "clean": "rimraf dist"
   },
