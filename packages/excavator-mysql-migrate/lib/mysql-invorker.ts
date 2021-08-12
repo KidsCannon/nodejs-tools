@@ -16,7 +16,7 @@ export class MysqlInvoker {
     try {
       return await fn(conn)
     } finally {
-      conn.end()
+      await conn.end()
     }
   }
 }

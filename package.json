@@ -8,10 +8,7 @@
   "scripts": {
     "lint": "eslint .",
     "format:fix": "prettier --write .",
-    "format:check": "prettier --check .",
-    "test": "lerna exec --stream -- yarn test",
-    "build": "lerna exec --stream -- yarn build",
-    "clean": "lerna exec --stream -- yarn clean"
+    "format:check": "prettier --check ."
   },
   "devDependencies": {
     "@types/jest": "^26.0.20",

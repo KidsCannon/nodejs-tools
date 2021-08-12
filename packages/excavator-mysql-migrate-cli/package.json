@@ -5,7 +5,6 @@
   "keywords": [],
   "author": "Takatoshi Matsumoto <toqoz403@gmail.com>",
   "license": "MIT",
-  "main": "lib/excavator-mysql-migrate-cli.js",
   "bin": {
     "excavator-mysql-migrate": "dist/bin/excavator-mysql-migrate-cli.js"
   },

@@ -19,7 +19,7 @@ export const getGlobalOptions = (argv_: string[]): GlobalOptions => {
   const host = argv['--host'] || process.env['MYSQL_HOST'] || 'localhost'
   const port = parseInt(argv['--port'] || process.env['MYSQL_PORT'] || '3306', 10)
   const user = argv['--user'] || process.env['MYSQL_USER']
-  const password = argv['--password'] || process.env['MYSQL_PASSWORD'] || ''
+  const password = argv['--password'] || process.env['MYSQL_PASSWORD']
   const database = argv['--database'] || process.env['MYSQL_DATABASE']
 
   if (!user || !database) {

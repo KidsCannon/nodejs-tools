@@ -2,7 +2,7 @@ export interface ConnectionConfig {
   host: string
   port: number
   user: string
-  password: string
+  password?: string
   database: string
 }
 

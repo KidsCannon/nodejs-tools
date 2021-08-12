@@ -145,7 +145,7 @@ describe('getGlobalOptions', () => {
     })
   })
 
-  describe('when `--host` and `port` and `password` are not passed as arguments', () => {
+  describe('when `--host` and `port` are not passed as arguments', () => {
     it('should return value with the default value set', () => {
       const extra = ['migrate']
       const user = 'root'
@@ -153,7 +153,6 @@ describe('getGlobalOptions', () => {
       // default value sets
       const host = 'localhost'
       const port = 3306
-      const password = ''
 
       const argv = [...extra, '--user', user, '--database', database]
 
@@ -163,7 +162,6 @@ describe('getGlobalOptions', () => {
         host: host,
         port: port,
         user: user,
-        password: password,
         database: database,
         extra: extra,
       })

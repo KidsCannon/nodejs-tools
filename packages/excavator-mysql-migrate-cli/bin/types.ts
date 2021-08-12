@@ -2,7 +2,7 @@ export interface GlobalOptions {
   host: string
   port: number
   user: string
-  password: string
+  password?: string
   database: string
   extra: string[]
 }

@@ -8,23 +8,29 @@ Setup:
 
 ```
 $ npm i -g yarn lerna
-$ lerna bootstrap
+$ yarn install
 ```
 
 Test projects:
 
 ```
-$ yarn test
+$ yarn workspaces test
+OR
+$ lerna run test --stream
 ```
 
 Build projects:
 
 ```
-$ yarn build
+$ yarn workspaces build
+OR
+$ lerna run build --stream
 ```
 
 Clean project build files:
 
 ```
-$ yarn clean
+$ yarn workspaces clean
+OR
+$ lerna run clean --stream
 ```
