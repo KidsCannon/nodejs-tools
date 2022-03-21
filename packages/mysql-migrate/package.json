@@ -1,5 +1,5 @@
 {
-  "name": "@typeghost/excavator-mysql-migrate",
+  "name": "@kidscannon/mysql-migrate",
   "version": "0.0.0",
   "description": "MySQL schema migration",
   "keywords": [],
@@ -12,7 +12,7 @@
   "main": "dist/lib/index.js",
   "types": "dist/lib/index.d.js",
   "directories": {
-    "test": "dist/__tests__"
+    "lib": "lib"
   },
   "files": [
     "dist/lib/"

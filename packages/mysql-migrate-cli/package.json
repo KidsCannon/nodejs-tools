@@ -1,12 +1,12 @@
 {
-  "name": "@typeghost/excavator-mysql-migrate-cli",
+  "name": "@kidscannon/mysql-migrate-cli",
   "version": "0.0.0",
   "description": "MySQL schema migration CLI",
   "keywords": [],
   "author": "Takatoshi Matsumoto <toqoz403@gmail.com>",
   "license": "MIT",
   "bin": {
-    "excavator-mysql-migrate": "dist/bin/excavator-mysql-migrate-cli.js"
+    "mysql-migrate": "dist/bin/mysql-migrate-cli.js"
   },
   "directories": {
     "test": "dist/__tests__"
@@ -31,7 +31,9 @@
   },
   "homepage": "https://github.com/typeghost/excavator#readme",
   "dependencies": {
-    "@typeghost/excavator-mysql-migrate": "0.0.0",
+    "@kidscannon/mysql-migrate": "0.0.0",
     "arg": "^5.0.0"
-  }
+  },
+  "main": "jest.config.js",
+  "devDependencies": {}
 }

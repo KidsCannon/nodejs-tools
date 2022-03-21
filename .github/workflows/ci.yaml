@@ -31,4 +31,4 @@ jobs:
       - run: yarn format:check
       - run: yarn lint
       - run: yarn build
-      - run: lerna run test
+      - run: npm run test
