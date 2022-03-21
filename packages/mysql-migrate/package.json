@@ -1,6 +1,6 @@
 {
   "name": "@kidscannon/mysql-migrate",
-  "version": "0.0.2-alpha.0",
+  "version": "0.0.2-alpha.7",
   "description": "MySQL schema migration",
   "keywords": [],
   "homepage": "https://github.com/KidsCannon/nodejs-tools#readme",
@@ -28,8 +28,7 @@
   "scripts": {
     "test": "jest --verbose",
     "build": "tsc -b",
-    "clean": "rimraf dist",
-    "publish": "npm run clean && npm run build && npm publish"
+    "clean": "rimraf dist"
   },
   "dependencies": {
     "crc": "^3.8.0",
