@@ -1,6 +1,6 @@
 {
   "name": "@kidscannon/mysql-migrate",
-  "version": "0.0.1",
+  "version": "0.0.1-alpha.0",
   "description": "MySQL schema migration",
   "keywords": [],
   "homepage": "https://github.com/KidsCannon/nodejs-tools#readme",

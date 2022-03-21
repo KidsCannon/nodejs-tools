@@ -1,6 +1,6 @@
 {
   "name": "@kidscannon/mysql-migrate-cli",
-  "version": "0.0.1",
+  "version": "0.0.1-alpha.0",
   "description": "MySQL schema migration CLI",
   "keywords": [],
   "homepage": "https://github.com/KidsCannon/nodejs-tools#readme",
@@ -32,7 +32,7 @@
     "clean": "rimraf dist"
   },
   "dependencies": {
-    "@kidscannon/mysql-migrate": "0.0.1",
+    "@kidscannon/mysql-migrate": "0.0.1-alpha.0",
     "arg": "^5.0.0"
   },
   "devDependencies": {}
