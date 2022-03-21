@@ -1,8 +1,9 @@
 #!/usr/bin/env node
-import path from 'path'
+
 import { create, drop, migrate } from '@kidscannon/mysql-migrate'
 import { getCreateOptions } from './get-create-options'
 import { getGlobalOptions } from './get-global-options'
+import { getMigrateOptions } from './get-migrate-options'
 
 const main = async (argv_: string[]) => {
   const opts = getGlobalOptions(argv_.slice(2))
@@ -18,9 +19,7 @@ const main = async (argv_: string[]) => {
       await drop(opts)
       break
     case 'migrate':
-      await migrate(opts, {
-        migrationDirectory: path.join(process.cwd(), 'migrations'),
-      })
+      await migrate(opts, getMigrateOptions(extraOpts))
       break
     default:
       throw new Error(`The ${subCommand} subcommand does not exist`)

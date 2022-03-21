@@ -1,11 +1,11 @@
-import { CreateOptions } from './types'
+import { MigrateOptions } from './types'
 import arg from 'arg'
+import path from 'path'
 
-export const getCreateOptions = (argv_: string[]): CreateOptions => {
+export const getMigrateOptions = (argv_: string[]): MigrateOptions => {
   const argv = arg(
     {
-      '--character-set': String,
-      '--collate': String,
+      '--migration-directory': String,
     },
     {
       argv: argv_,
@@ -13,11 +13,9 @@ export const getCreateOptions = (argv_: string[]): CreateOptions => {
     },
   )
 
-  const characterSet = argv['--character-set'] || process.env['MYSQL_CHARACTER_SET']
-  const collate = argv['--collate'] || process.env['MYSQL_COLLATE']
+  const migrationDirectory = argv['--migration-directory'] || path.join(process.cwd(), 'migrations')
 
   return {
-    characterSet: characterSet,
-    collate: collate,
+    migrationDirectory,
   }
 }

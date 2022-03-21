@@ -12,3 +12,7 @@ export interface CreateOptions {
   characterSet?: string
   collate?: string
 }
+
+export interface MigrateOptions {
+  migrationDirectory: string
+}
