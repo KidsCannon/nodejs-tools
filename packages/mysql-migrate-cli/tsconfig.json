@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "rootDirs": [
+      "./bin"
+    ],
+    "outDir": "./dist"
+  },
+  "exclude": [
+    "dist"
+  ],
+  "references": [
+    {
+      "path": "../mysql-migrate"
+    }
+  ]
+}

@@ -9,15 +9,18 @@
     "lint": "eslint .",
     "format:fix": "prettier --write .",
     "format:check": "prettier --check .",
-    "type:check": "lerna exec --stream -- yarn tsc -p . -noEmit"
+    "test": "npm run test -ws",
+    "build": "npm run build -ws"
   },
   "devDependencies": {
+    "@monorepo-utils/workspaces-to-typescript-project-references": "^2.7.4",
     "@types/jest": "^26.0.20",
     "@types/node": "^14.14.35",
     "@typescript-eslint/eslint-plugin": "^4.18.0",
     "@typescript-eslint/parser": "^4.18.0",
     "eslint": "^7.22.0",
     "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
     "jest": "^26.6.3",
     "npm-check-updates": "^11.3.0",
     "prettier": "^2.2.1",

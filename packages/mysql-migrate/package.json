@@ -1,0 +1,41 @@
+{
+  "name": "@kidscannon/mysql-migrate",
+  "version": "0.0.1",
+  "description": "MySQL schema migration",
+  "keywords": [],
+  "homepage": "https://github.com/KidsCannon/nodejs-tools#readme",
+  "bugs": {
+    "url": "https://github.com/KidsCannon/nodejs-tools/issues"
+  },
+  "author": "Takatoshi Matsumoto <toqoz403@gmail.com>",
+  "contributors": ["Satoshi Honda <bin.honda@gmail.com>"],
+  "license": "MIT",
+  "main": "dist/lib/index.js",
+  "types": "dist/lib/index.d.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "dist/lib/"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KidsCannon/nodejs-tools.git"
+  },
+  "scripts": {
+    "test": "jest --verbose",
+    "build": "tsc -b",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "crc": "^3.8.0",
+    "mysql2": "^2.2.5",
+    "testcontainers": "^7.18.2"
+  },
+  "devDependencies": {
+    "@types/crc": "^3.4.0"
+  }
+}
