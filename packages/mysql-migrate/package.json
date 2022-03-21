@@ -1,13 +1,14 @@
 {
   "name": "@kidscannon/mysql-migrate",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "MySQL schema migration",
   "keywords": [],
-  "homepage": "https://github.com/typeghost/excavator#readme",
+  "homepage": "https://github.com/KidsCannon/nodejs-tools#readme",
   "bugs": {
-    "url": "https://github.com/typeghost/excavator/issues"
+    "url": "https://github.com/KidsCannon/nodejs-tools/issues"
   },
   "author": "Takatoshi Matsumoto <toqoz403@gmail.com>",
+  "contributors": ["Satoshi Honda <bin.honda@gmail.com>"],
   "license": "MIT",
   "main": "dist/lib/index.js",
   "types": "dist/lib/index.d.js",
@@ -22,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/typeghost/excavator.git"
+    "url": "git+https://github.com/KidsCannon/nodejs-tools.git"
   },
   "scripts": {
     "test": "jest --verbose",
