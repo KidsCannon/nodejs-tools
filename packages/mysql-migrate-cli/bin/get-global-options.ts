@@ -9,6 +9,7 @@ export const getGlobalOptions = (argv_: string[]): GlobalOptions => {
       '--user': String,
       '--password': String,
       '--database': String,
+      '--ssl': String,
     },
     {
       argv: argv_,
@@ -21,6 +22,7 @@ export const getGlobalOptions = (argv_: string[]): GlobalOptions => {
   const user = argv['--user'] || process.env['MYSQL_USER']
   const password = argv['--password'] || process.env['MYSQL_PASSWORD']
   const database = argv['--database'] || process.env['MYSQL_DATABASE']
+  const ssl = argv['--ssl'] || process.env['MYSQL_SSL']
 
   if (!user || !database) {
     throw new Error('user, database values are required')
@@ -32,6 +34,7 @@ export const getGlobalOptions = (argv_: string[]): GlobalOptions => {
     user: user,
     password: password,
     database: database,
+    ssl,
     extra: argv._,
   }
 }

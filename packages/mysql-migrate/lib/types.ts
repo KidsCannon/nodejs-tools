@@ -4,6 +4,7 @@ export interface ConnectionConfig {
   user: string
   password?: string
   database: string
+  ssl?: string
 }
 
 export interface CreateDatabaseConfig {

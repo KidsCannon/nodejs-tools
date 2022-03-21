@@ -10,6 +10,7 @@ export class MysqlInvoker {
       port: this.config.port,
       user: this.config.user,
       password: this.config.password,
+      ssl: this.config.ssl,
       ...(connectDatabase ? { database: this.config.database } : {}),
       multipleStatements: true,
     })

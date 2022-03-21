@@ -4,6 +4,7 @@ export interface GlobalOptions {
   user: string
   password?: string
   database: string
+  ssl?: string
   extra: string[]
 }
 
