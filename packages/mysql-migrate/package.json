@@ -21,11 +21,11 @@
   },
   "dependencies": {
     "crc": "^3.8.0",
-    "mysql2": "^2.2.5",
-    "testcontainers": "^7.18.2"
+    "mysql2": "^2.2.5"
   },
   "devDependencies": {
-    "@types/crc": "^3.4.0"
+    "@types/crc": "^3.4.0",
+    "testcontainers": "^7.18.2"
   },
   "jest": {
     "preset": "ts-jest",
