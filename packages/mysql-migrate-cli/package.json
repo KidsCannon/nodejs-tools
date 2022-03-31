@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@kidscannon/mysql-migrate": "0.0.2-alpha.7",
-    "arg": "^5.0.0"
+    "arg": "^5.0.1"
   },
   "devDependencies": {},
   "jest": {
