@@ -1,36 +1,10 @@
-# NODEX
+# Tools for Node.js Application
 
-Node.js application parts
-
-## DEVELOPMENT GUIDE
-
-Setup:
+## DEVELOPMENT
 
 ```
-$ npm i -g yarn lerna
-$ yarn install
-```
-
-Test projects:
-
-```
-$ yarn workspaces test
-OR
-$ lerna run test --stream
-```
-
-Build projects:
-
-```
-$ yarn workspaces build
-OR
-$ lerna run build --stream
-```
-
-Clean project build files:
-
-```
-$ yarn workspaces clean
-OR
-$ lerna run clean --stream
+$ npm i
+$ npm run test  # test all packages
+$ npm run build # build all packages
+$ npm run clean # clean build artifacts
 ```
