@@ -1,4 +1,4 @@
-import { create, drop, migrate } from '../../lib'
+import { create, drop, migrate } from '../lib'
 import { StartedTestContainer } from 'testcontainers/dist/test-container'
 import { GenericContainer } from 'testcontainers'
 import mysql, { Connection, RowDataPacket } from 'mysql2/promise'
@@ -48,7 +48,7 @@ describe('integration test', () => {
         default_collation_name: 'utf8mb4_bin',
       })
 
-      await migrate(config, { migrationDirectory: './migrations' })
+      await migrate(config, { migrationDirectory: './__tests__/testdata/migrations' })
       expect(await selectTableNames(infoConn, 'test')).toEqual(['post', 'schema_version', 'user'])
 
       const [rows] = await infoConn.query('SELECT * FROM `test`.`schema_version`')

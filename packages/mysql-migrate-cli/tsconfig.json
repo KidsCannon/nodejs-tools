@@ -1,11 +1,11 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "rootDirs": [
-      "./bin"
-    ],
-    "outDir": "./dist"
+    "outDir": "./dist/cjs"
   },
+  "include": [
+    "bin"
+  ],
   "exclude": [
     "dist"
   ],

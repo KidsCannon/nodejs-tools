@@ -1,11 +1,28 @@
-# `@kidscannon/mysql-migrate-cli.ts`
+# `@kidscannon/mysql-migrate`
 
-> TODO: description
+## Install
+
+```
+$ npm i @kidscannon/mysql-migrate
+```
 
 ## Usage
 
 ```
-const excavatorMysqlMigrate = require('@kidscannon/mysql-migrate-cli.ts');
-
-// TODO: DEMONSTRATE API
+import { migrate } from '@kidscannon/mysql-migrate'
+await migrate(globalOpts, migrateOpts)
 ```
+
+## Functions
+
+### create(globalOpts, createOpts)
+
+create database.
+
+### migrate(globalOpts, migrateOpts)
+
+migrate database.
+
+### drop(globalOpts, dropOpts)
+
+drop database.

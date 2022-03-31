@@ -2,38 +2,44 @@
   "name": "@kidscannon/mysql-migrate-cli",
   "version": "0.0.2-alpha.7",
   "description": "MySQL schema migration CLI",
-  "keywords": [],
-  "homepage": "https://github.com/KidsCannon/nodejs-tools#readme",
-  "bugs": {
-    "url": "https://github.com/KidsCannon/nodejs-tools/issues"
-  },
-  "author": "Takatoshi Matsumoto <toqoz403@gmail.com>",
-  "contributors": ["Satoshi Honda <bin.honda@gmail.com>"],
-  "license": "MIT",
-  "bin": {
-    "mysql-migrate": "dist/bin/mysql-migrate-cli.js"
-  },
+  "keywords": ["MySQL", "Migration", "CLI"],
+  "homepage": "https://github.com/KidsCannon/nodejs-tools/tree/main/packages/mysql-migrate-cli",
   "directories": {
-    "test": "dist/__tests__"
+    "lib": "dist",
+    "test": "__tests__"
   },
   "files": [
-    "dist/bin/"
+    "dist/"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KidsCannon/nodejs-tools.git"
+  "bin": {
+    "mysql-migrate": "dist/cjs/bin/mysql-migrate-cli.js"
   },
   "scripts": {
     "test": "jest --verbose",
-    "build": "tsc -b",
-    "clean": "rimraf dist"
+    "build": "tsc -b && tsc -b tsconfig.esm.json",
+    "clean": "rimraf dist tsconfig.tsbuildinfo"
   },
   "dependencies": {
     "@kidscannon/mysql-migrate": "0.0.2-alpha.7",
     "arg": "^5.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "roots": ["<rootDir>/__tests__"]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KidsCannon/nodejs-tools.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KidsCannon/nodejs-tools/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Takatoshi Matsumoto <toqoz403@gmail.com>",
+  "contributors": ["Satoshi Honda <bin.honda@gmail.com>"],
+  "license": "MIT"
 }

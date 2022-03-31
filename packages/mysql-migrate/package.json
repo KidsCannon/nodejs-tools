@@ -2,33 +2,22 @@
   "name": "@kidscannon/mysql-migrate",
   "version": "0.0.2-alpha.7",
   "description": "MySQL schema migration",
-  "keywords": [],
-  "homepage": "https://github.com/KidsCannon/nodejs-tools#readme",
-  "bugs": {
-    "url": "https://github.com/KidsCannon/nodejs-tools/issues"
-  },
-  "author": "Takatoshi Matsumoto <toqoz403@gmail.com>",
-  "contributors": ["Satoshi Honda <bin.honda@gmail.com>"],
-  "license": "MIT",
-  "main": "dist/lib/index.js",
-  "types": "dist/lib/index.d.js",
+  "keywords": ["MySQL", "Migration"],
+  "homepage": "https://github.com/KidsCannon/nodejs-tools/tree/main/packages/mysql-migrate",
+  "main": "dist/cjs/lib/index.js",
+  "types": "dist/cjs/lib/index.d.js",
+  "module": "dist/esm/lib/index.js",
   "directories": {
-    "lib": "lib"
+    "lib": "dist/lib",
+    "test": "__tests__"
   },
   "files": [
-    "dist/lib/"
+    "dist/"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KidsCannon/nodejs-tools.git"
-  },
   "scripts": {
     "test": "jest --verbose",
-    "build": "tsc -b",
-    "clean": "rimraf dist"
+    "build": "tsc -b && tsc -b tsconfig.esm.json",
+    "clean": "rimraf dist tsconfig.tsbuildinfo"
   },
   "dependencies": {
     "crc": "^3.8.0",
@@ -37,5 +26,26 @@
   },
   "devDependencies": {
     "@types/crc": "^3.4.0"
-  }
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "roots": ["<rootDir>/__tests__"],
+    "setupFilesAfterEnv": ["<rootDir>/__tests__/jest-setup.ts"],
+    "testTimeout": 50000,
+    "testRegex": ".+\\.(test|spec)\\.ts$"
+  },
+  "bugs": {
+    "url": "https://github.com/KidsCannon/nodejs-tools/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KidsCannon/nodejs-tools.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Takatoshi Matsumoto <toqoz403@gmail.com>",
+  "contributors": ["Satoshi Honda <bin.honda@gmail.com>"],
+  "license": "MIT"
 }

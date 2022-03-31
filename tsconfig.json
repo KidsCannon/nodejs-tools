@@ -13,7 +13,7 @@
     // js
     "alwaysStrict": true,
     "sourceMap": true,
-    "jsx": "react",
+    "jsx": "preserve",
     // no fallthrough
     "noFallthroughCasesInSwitch": true,
     // no unused
@@ -25,5 +25,8 @@
     "strictFunctionTypes": true,
     "strictNullChecks": true,
     "noUncheckedIndexedAccess": true
-  }
+  },
+  "files": [],
+  "include": [],
+  "exclude": []
 }

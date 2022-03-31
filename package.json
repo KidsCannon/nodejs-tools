@@ -3,12 +3,19 @@
   "private": true,
   "workspaces": [
     "packages/*",
-    "examples/*"
   ],
+  "prettier": {
+    "semi": false,
+    "trailingComma": "all",
+    "singleQuote": true,
+    "printWidth": 120,
+    "tabWidth": 2
+  },
   "scripts": {
     "lint": "eslint .",
     "format:fix": "prettier --write .",
     "format:check": "prettier --check .",
+    "clean": "npm run clean -ws",
     "test": "npm run test -ws",
     "build": "npm run build -ws"
   },

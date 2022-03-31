@@ -1,4 +1,4 @@
-import { buildCreateDatabaseSql } from '../../lib/build-create-database-sql'
+import { buildCreateDatabaseSql } from '../lib/build-create-database-sql'
 
 describe('buildCreateDatabaseSql', () => {
   it('should return values that are not set when `characterSet` and `collate` are not set in create config', async () => {
