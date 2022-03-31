@@ -24,12 +24,11 @@ describe('integration test', () => {
 
   let container: StartedTestContainer
 
-  beforeAll(async (done) => {
+  beforeAll(async () => {
     container = await new GenericContainer('mysql:5.7')
       .withEnv('MYSQL_ALLOW_EMPTY_PASSWORD', '1')
       .withExposedPorts(3306)
       .start()
-    done()
   })
 
   it('create -> migrate -> drop', async () => {
