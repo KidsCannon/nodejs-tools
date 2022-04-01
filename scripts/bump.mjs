@@ -1,5 +1,11 @@
 import fs from 'fs/promises'
-import { getPackageInfos } from "workspace-tools"
+import { getPackageInfos, getBranchName } from "workspace-tools"
+
+const branch = getBranchName('.')
+if (branch !== 'main') {
+  console.log('Error: bump should be executed in main branch')
+  process.exit(1)
+}
 
 // Ensure all changes are committed
 await $`git diff`
@@ -55,3 +61,5 @@ for (const [f, packageJson] of files) {
 await $`npm i`
 await $`git add -A`
 await $`git commit -m 'Bump version: ${oldVersion} -> ${version}'`
+await $`git tag -a v${version} -m v${version}`
+await $`git push --tags`
