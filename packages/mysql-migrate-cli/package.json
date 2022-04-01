@@ -1,8 +1,12 @@
 {
   "name": "@kidscannon/mysql-migrate-cli",
-  "version": "0.0.2-alpha.7",
+  "version": "0.0.3",
   "description": "MySQL schema migration CLI",
-  "keywords": ["MySQL", "Migration", "CLI"],
+  "keywords": [
+    "MySQL",
+    "Migration",
+    "CLI"
+  ],
   "homepage": "https://github.com/KidsCannon/nodejs-tools/tree/main/packages/mysql-migrate-cli",
   "directories": {
     "lib": "dist",
@@ -27,7 +31,9 @@
   "jest": {
     "preset": "ts-jest",
     "testEnvironment": "node",
-    "roots": ["<rootDir>/__tests__"]
+    "roots": [
+      "<rootDir>/__tests__"
+    ]
   },
   "repository": {
     "type": "git",
@@ -40,6 +46,8 @@
     "access": "public"
   },
   "author": "Takatoshi Matsumoto <toqoz403@gmail.com>",
-  "contributors": ["Satoshi Honda <bin.honda@gmail.com>"],
+  "contributors": [
+    "Satoshi Honda <bin.honda@gmail.com>"
+  ],
   "license": "MIT"
 }
