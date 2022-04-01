@@ -1,5 +1,0 @@
-#!/bin/sh
-
-npm run build
-(cd packages/mysql-migrate && npm publish)
-(cd packages/mysql-migrate-cli && npm publish)

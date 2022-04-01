@@ -1,8 +1,11 @@
 {
   "name": "@kidscannon/mysql-migrate",
-  "version": "0.0.2-alpha.7",
+  "version": "0.0.3",
   "description": "MySQL schema migration",
-  "keywords": ["MySQL", "Migration"],
+  "keywords": [
+    "MySQL",
+    "Migration"
+  ],
   "homepage": "https://github.com/KidsCannon/nodejs-tools/tree/main/packages/mysql-migrate",
   "main": "dist/cjs/lib/index.js",
   "types": "dist/cjs/lib/index.d.js",
@@ -29,8 +32,12 @@
   "jest": {
     "preset": "ts-jest",
     "testEnvironment": "node",
-    "roots": ["<rootDir>/__tests__"],
-    "setupFilesAfterEnv": ["<rootDir>/__tests__/jest-setup.ts"],
+    "roots": [
+      "<rootDir>/__tests__"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/__tests__/jest-setup.ts"
+    ],
     "testTimeout": 50000,
     "testRegex": ".+\\.(test|spec)\\.ts$"
   },
@@ -45,6 +52,8 @@
     "access": "public"
   },
   "author": "Takatoshi Matsumoto <toqoz403@gmail.com>",
-  "contributors": ["Satoshi Honda <bin.honda@gmail.com>"],
+  "contributors": [
+    "Satoshi Honda <bin.honda@gmail.com>"
+  ],
   "license": "MIT"
 }
