@@ -7,6 +7,11 @@
     "Migration"
   ],
   "homepage": "https://github.com/KidsCannon/nodejs-tools/tree/main/packages/mysql-migrate",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KidsCannon/nodejs-tools.git",
+    "directory": "packages/mysql-migrate"
+  },
   "main": "dist/cjs/lib/index.js",
   "types": "dist/cjs/lib/index.d.js",
   "module": "dist/esm/lib/index.js",
@@ -43,10 +48,6 @@
   },
   "bugs": {
     "url": "https://github.com/KidsCannon/nodejs-tools/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KidsCannon/nodejs-tools.git"
   },
   "publishConfig": {
     "access": "public"

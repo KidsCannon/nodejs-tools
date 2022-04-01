@@ -8,6 +8,11 @@
     "CLI"
   ],
   "homepage": "https://github.com/KidsCannon/nodejs-tools/tree/main/packages/mysql-migrate-cli",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KidsCannon/nodejs-tools.git",
+    "directory": "packages/mysql-migrate-cli"
+  },
   "directories": {
     "lib": "dist",
     "test": "__tests__"
@@ -34,10 +39,6 @@
     "roots": [
       "<rootDir>/__tests__"
     ]
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KidsCannon/nodejs-tools.git"
   },
   "bugs": {
     "url": "https://github.com/KidsCannon/nodejs-tools/issues"
