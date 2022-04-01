@@ -51,9 +51,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "author": "Takatoshi Matsumoto <toqoz403@gmail.com>",
-  "contributors": [
-    "Satoshi Honda <bin.honda@gmail.com>"
-  ],
   "license": "MIT"
 }
