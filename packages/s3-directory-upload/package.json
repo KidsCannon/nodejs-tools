@@ -1,0 +1,49 @@
+{
+  "name": "@kidscannon/s3-directory-upload",
+  "version": "0.0.1",
+  "description": "upload directory to s3",
+  "keywords": [
+    "s3"
+  ],
+  "homepage": "https://github.com/KidsCannon/nodejs-tools/tree/main/packages/s3-directory-upload",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KidsCannon/nodejs-tools.git",
+    "directory": "packages/s3-directory-upload"
+  },
+  "main": "dist/cjs/lib/index.js",
+  "types": "dist/cjs/lib/index.d.js",
+  "module": "dist/esm/lib/index.js",
+  "directories": {
+    "lib": "dist",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "test": "jest --verbose",
+    "build": "tsc -b && tsc -b tsconfig.esm.json",
+    "clean": "rimraf dist tsconfig.tsbuildinfo"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.58.0",
+    "@kidscannon/ls-recursive": "0.0.1",
+    "@kidscannon/paginate": "^0.0.1",
+    "p-limit": "^3.1.0"
+  },
+  "devDependencies": {
+    "testcontainers": "^8.6.1"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "roots": [
+      "<rootDir>/__tests__"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/KidsCannon/nodejs-tools/issues"
+  },
+  "license": "MIT"
+}
