@@ -1,13 +1,13 @@
-# `@kidscannon/gzip-r`
+# `@kidscannon/ls-recursive`
 
 ## Install
 
 ```
-$ npm i @kidscannon/gzip-r
+$ npm i @kidscannon/ls-recursive
 ```
 
 ## Usage
 
 ```
-await gzipR('/directory')
+await lsRecursive('/directory')
 ```
