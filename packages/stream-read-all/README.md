@@ -1,13 +1,14 @@
-# `@kidscannon/ls-recursive`
+# `@kidscannon/stream-read-all`
 
 ## Install
 
 ```
-$ npm i @kidscannon/ls-recursive
+$ npm i @kidscannon/stream-read-all
 ```
 
 ## Usage
 
 ```
-await lsRecursive('/directory')
+const stream = fs.createReadStream('file.txt')
+await streamReadAll(stream)
 ```
