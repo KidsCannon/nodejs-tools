@@ -11,17 +11,8 @@ import {
 import { StartedTestContainer } from 'testcontainers/dist/test-container'
 import { GenericContainer } from 'testcontainers'
 import { paginate } from '@kidscannon/paginate'
-import { Readable } from 'stream'
 import { notEmpty } from '@kidscannon/not-empty'
-
-async function streamToString(stream: Readable): Promise<string> {
-  return await new Promise((resolve, reject) => {
-    const chunks: Uint8Array[] = []
-    stream.on('data', (chunk) => chunks.push(chunk))
-    stream.on('error', reject)
-    stream.on('end', () => resolve(Buffer.concat(chunks).toString('utf-8')))
-  })
-}
+import { streamReadAll } from '@kidscannon/stream-read-all'
 
 describe('s3-directory-upload', () => {
   jest.setTimeout(2 * 60 * 1000)
@@ -73,15 +64,15 @@ describe('s3-directory-upload', () => {
 
     {
       const res = await client.send(new GetObjectCommand({ Bucket: 'testx', Key: 'p/a.txt' }))
-      expect(await streamToString(res.Body)).toBe('01\n02\n03\n')
+      expect(Buffer.concat(await streamReadAll(res.Body)).toString('utf-8')).toBe('01\n02\n03\n')
     }
     {
       const res = await client.send(new GetObjectCommand({ Bucket: 'testx', Key: 'p/b.txt' }))
-      expect(await streamToString(res.Body)).toBe('aa\nbb\ncc\n')
+      expect(Buffer.concat(await streamReadAll(res.Body)).toString('utf-8')).toBe('aa\nbb\ncc\n')
     }
     {
       const res = await client.send(new GetObjectCommand({ Bucket: 'testx', Key: 'p/c/x.txt' }))
-      expect(await streamToString(res.Body)).toBe('xxx\nyyy\nzzz\n')
+      expect(Buffer.concat(await streamReadAll(res.Body)).toString('utf-8')).toBe('xxx\nyyy\nzzz\n')
     }
   })
 })
