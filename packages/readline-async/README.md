@@ -1,27 +1,13 @@
-# `@kidscannon/mysql-migrate-cli`
+# `@kidscannon/readline-async`
 
 ## Install
 
 ```
-$ npm i @kidscannon/mysql-migrate-cli
+$ npm i @kidscannon/readline-async
 ```
 
 ## Usage
 
 ```
-$ MYSQL_HOST=example.com \
-  MYSQL_PASSWORD=**** \
-  MYSQL_DATABASE=db \
-  MYSQL_SSL='{ "rejectUnauthorized": true }' \
-  mysql-migrate migrate
+await readlineAsync({ input: fs.createReadStream('/tmp/x.txt'), terminal: false }, (line) => {})
 ```
-
-## Options
-
-### Global Options
-
-### Create command Options
-
-### Migrate command Options
-
-### Drop command Options
