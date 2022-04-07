@@ -12,10 +12,7 @@ import { StartedTestContainer } from 'testcontainers/dist/test-container'
 import { GenericContainer } from 'testcontainers'
 import { paginate } from '@kidscannon/paginate'
 import { Readable } from 'stream'
-
-const notEmpty = <T>(value: T | null | undefined): value is T => {
-  return value !== null && value !== undefined
-}
+import { notEmpty } from '@kidscannon/not-empty'
 
 async function streamToString(stream: Readable): Promise<string> {
   return await new Promise((resolve, reject) => {

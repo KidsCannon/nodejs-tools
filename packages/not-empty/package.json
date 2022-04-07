@@ -1,15 +1,15 @@
 {
-  "name": "@kidscannon/s3-directory-upload",
+  "name": "@kidscannon/not-empty",
   "version": "0.0.1",
-  "description": "upload directory to s3",
+  "description": "ensure not null | undefined",
   "keywords": [
-    "s3"
+    "null"
   ],
-  "homepage": "https://github.com/KidsCannon/nodejs-tools/tree/main/packages/s3-directory-upload",
+  "homepage": "https://github.com/KidsCannon/nodejs-tools/tree/main/packages/not-empty",
   "repository": {
     "type": "git",
     "url": "https://github.com/KidsCannon/nodejs-tools.git",
-    "directory": "packages/s3-directory-upload"
+    "directory": "packages/not-empty"
   },
   "main": "dist/cjs/lib/index.js",
   "types": "dist/cjs/lib/index.d.js",
@@ -26,16 +26,8 @@
     "build": "tsc -b && tsc -b tsconfig.esm.json",
     "clean": "rimraf dist tsconfig.tsbuildinfo"
   },
-  "dependencies": {
-    "@aws-sdk/client-s3": "^3.58.0",
-    "@kidscannon/ls-recursive": "0.0.1",
-    "@kidscannon/paginate": "^0.0.1",
-    "p-limit": "^3.1.0"
-  },
-  "devDependencies": {
-    "@kidscannon/not-empty": "^0.0.1",
-    "testcontainers": "^8.6.1"
-  },
+  "dependencies": {},
+  "devDependencies": {},
   "jest": {
     "preset": "ts-jest",
     "testEnvironment": "node",
