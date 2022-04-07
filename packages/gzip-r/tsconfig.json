@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist/cjs"
+  },
+  "include": [
+    "lib"
+  ],
+  "exclude": [
+    "dist"
+  ]
+}
