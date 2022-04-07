@@ -27,7 +27,8 @@
     "clean": "rimraf dist tsconfig.tsbuildinfo"
   },
   "dependencies": {
-    "@kidscannon/ls-recursive": "0.0.1"
+    "@kidscannon/ls-recursive": "0.0.1",
+    "p-limit": "^3.1.0"
   },
   "jest": {
     "preset": "ts-jest",
