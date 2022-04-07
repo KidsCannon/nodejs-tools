@@ -1,15 +1,15 @@
 {
-  "name": "@kidscannon/gzip-r",
+  "name": "@kidscannon/ls-recursive",
   "version": "0.0.1",
-  "description": "gzip files in the directory",
+  "description": "list files in the directory recursively",
   "keywords": [
     "gzip"
   ],
-  "homepage": "https://github.com/KidsCannon/nodejs-tools/tree/main/packages/gzip-r",
+  "homepage": "https://github.com/KidsCannon/nodejs-tools/tree/main/packages//ls-recursive",
   "repository": {
     "type": "git",
     "url": "https://github.com/KidsCannon/nodejs-tools.git",
-    "directory": "packages/gzip-r"
+    "directory": "packages/ls-recursive"
   },
   "main": "dist/cjs/lib/index.js",
   "types": "dist/cjs/lib/index.d.js",
@@ -26,9 +26,8 @@
     "build": "tsc -b && tsc -b tsconfig.esm.json",
     "clean": "rimraf dist tsconfig.tsbuildinfo"
   },
-  "dependencies": {
-    "@kidscannon/ls-recursive": "0.0.1"
-  },
+  "dependencies": {},
+  "devDependencies": {},
   "jest": {
     "preset": "ts-jest",
     "testEnvironment": "node",

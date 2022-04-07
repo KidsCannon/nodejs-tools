@@ -1,15 +1,15 @@
 {
-  "name": "@kidscannon/gzip-r",
+  "name": "@kidscannon/gunzip-r",
   "version": "0.0.1",
-  "description": "gzip files in the directory",
+  "description": "gunzip files in the directory",
   "keywords": [
-    "gzip"
+    "gunzip"
   ],
-  "homepage": "https://github.com/KidsCannon/nodejs-tools/tree/main/packages/gzip-r",
+  "homepage": "https://github.com/KidsCannon/nodejs-tools/tree/main/packages/gunzip-r",
   "repository": {
     "type": "git",
     "url": "https://github.com/KidsCannon/nodejs-tools.git",
-    "directory": "packages/gzip-r"
+    "directory": "packages/gunzip-r"
   },
   "main": "dist/cjs/lib/index.js",
   "types": "dist/cjs/lib/index.d.js",
