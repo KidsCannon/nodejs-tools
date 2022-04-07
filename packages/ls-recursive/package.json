@@ -5,7 +5,7 @@
   "keywords": [
     "gzip"
   ],
-  "homepage": "https://github.com/KidsCannon/nodejs-tools/tree/main/packages//ls-recursive",
+  "homepage": "https://github.com/KidsCannon/nodejs-tools/tree/main/packages/ls-recursive",
   "repository": {
     "type": "git",
     "url": "https://github.com/KidsCannon/nodejs-tools.git",
