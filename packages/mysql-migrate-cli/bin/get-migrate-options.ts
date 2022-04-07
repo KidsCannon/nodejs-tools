@@ -1,6 +1,7 @@
-import { MigrateOptions } from './types'
 import arg from 'arg'
 import path from 'path'
+
+import { MigrateOptions } from './types'
 
 export const getMigrateOptions = (argv_: string[]): MigrateOptions => {
   const argv = arg(

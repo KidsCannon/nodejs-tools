@@ -1,5 +1,6 @@
-import { GlobalOptions } from './types'
 import arg from 'arg'
+
+import { GlobalOptions } from './types'
 
 export const getGlobalOptions = (argv_: string[]): GlobalOptions => {
   const argv = arg(

@@ -1,9 +1,9 @@
-import zlib from 'zlib'
-import fs from 'fs'
-import os from 'os'
-import fsPromises from 'fs/promises'
-import pLimit from 'p-limit'
 import { lsRecursive } from '@kidscannon/ls-recursive'
+import fs from 'fs'
+import fsPromises from 'fs/promises'
+import os from 'os'
+import pLimit from 'p-limit'
+import zlib from 'zlib'
 
 export const gzipR = async (src: string, opts: { concurrency?: number } = {}): Promise<void> => {
   const limit = pLimit(opts.concurrency ?? os.cpus().length)

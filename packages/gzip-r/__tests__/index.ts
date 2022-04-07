@@ -1,7 +1,8 @@
-import { gzipR } from '../lib'
+import { execSync } from 'child_process'
 import fsPromises from 'fs/promises'
 import path from 'path'
-import { execSync } from 'child_process'
+
+import { gzipR } from '../lib'
 
 describe('gzip-r', () => {
   it('works', async () => {

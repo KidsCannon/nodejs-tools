@@ -1,5 +1,6 @@
-import { CreateOptions } from './types'
 import arg from 'arg'
+
+import { CreateOptions } from './types'
 
 export const getCreateOptions = (argv_: string[]): CreateOptions => {
   const argv = arg(

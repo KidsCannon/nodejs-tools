@@ -1,5 +1,5 @@
-import path from 'path'
 import fsPromises from 'fs/promises'
+import path from 'path'
 
 export const lsRecursive = async (directory: string): Promise<string[]> => {
   const files: string[] = []

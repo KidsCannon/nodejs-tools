@@ -1,5 +1,3 @@
-import { s3DirectoryUpload } from '../lib'
-import path from 'path'
 import {
   CreateBucketCommand,
   GetObjectCommand,
@@ -8,11 +6,14 @@ import {
   ListObjectsV2CommandOutput,
   S3Client,
 } from '@aws-sdk/client-s3'
-import { StartedTestContainer } from 'testcontainers/dist/test-container'
-import { GenericContainer } from 'testcontainers'
-import { paginate } from '@kidscannon/paginate'
 import { notEmpty } from '@kidscannon/not-empty'
+import { paginate } from '@kidscannon/paginate'
 import { streamReadAll } from '@kidscannon/stream-read-all'
+import path from 'path'
+import { GenericContainer } from 'testcontainers'
+import { StartedTestContainer } from 'testcontainers/dist/test-container'
+
+import { s3DirectoryUpload } from '../lib'
 
 describe('s3-directory-upload', () => {
   jest.setTimeout(2 * 60 * 1000)

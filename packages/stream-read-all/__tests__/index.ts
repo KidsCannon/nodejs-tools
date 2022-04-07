@@ -1,5 +1,6 @@
-import path from 'path'
 import fs from 'fs'
+import path from 'path'
+
 import { streamReadAll } from '../lib'
 
 describe('stream-read-all', () => {

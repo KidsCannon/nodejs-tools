@@ -1,8 +1,8 @@
-import path from 'path'
-import fs from 'fs'
-import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3'
+import { PutObjectCommand,S3Client } from '@aws-sdk/client-s3'
 import { lsRecursive } from '@kidscannon/ls-recursive'
+import fs from 'fs'
 import pLimit from 'p-limit'
+import path from 'path'
 
 export const s3DirectoryUpload = async (
   source: string,

@@ -1,12 +1,13 @@
+import { createReadStream,readdirSync } from 'fs'
 import path from 'path'
-import { MysqlInvoker } from './mysql-invorker'
-import { ConnectionConfig, CreateDatabaseConfig, migrateConfig, MigrationFileName, SchemaVersion } from './types'
+
 import { buildCreateDatabaseSql } from './build-create-database-sql'
+import { MysqlInvoker } from './mysql-invorker'
 import { parseFileName } from './parse-file-name'
-import { SchemaVersionRepository } from './schema-version-repository'
 import { readSql } from './read-sql'
-import { readdirSync, createReadStream } from 'fs'
+import { SchemaVersionRepository } from './schema-version-repository'
 import { StopWatch } from './stop-watch'
+import { ConnectionConfig, CreateDatabaseConfig, migrateConfig, MigrationFileName, SchemaVersion } from './types'
 
 export const create = async (config: ConnectionConfig, createConfig: CreateDatabaseConfig): Promise<void> => {
   await new MysqlInvoker(config).invoke(async (conn) => {

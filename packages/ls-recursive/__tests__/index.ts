@@ -1,5 +1,6 @@
-import { lsRecursive } from '../lib'
 import path from 'path'
+
+import { lsRecursive } from '../lib'
 
 describe('ls-recursive', () => {
   it('works', async () => {

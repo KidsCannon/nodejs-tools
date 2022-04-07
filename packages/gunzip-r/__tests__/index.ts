@@ -1,8 +1,9 @@
-import { gunzipR } from '../lib'
+import { lsRecursive } from '@kidscannon/ls-recursive'
+import { execSync } from 'child_process'
 import fsPromises from 'fs/promises'
 import path from 'path'
-import { execSync } from 'child_process'
-import { lsRecursive } from '@kidscannon/ls-recursive'
+
+import { gunzipR } from '../lib'
 
 describe('gunzip-r', () => {
   it('works', async () => {

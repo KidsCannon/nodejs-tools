@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import { create, drop, migrate } from '@kidscannon/mysql-migrate'
+
 import { getCreateOptions } from './get-create-options'
 import { getGlobalOptions } from './get-global-options'
 import { getMigrateOptions } from './get-migrate-options'

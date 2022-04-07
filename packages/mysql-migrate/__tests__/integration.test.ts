@@ -1,7 +1,8 @@
-import { create, drop, migrate } from '../lib'
-import { StartedTestContainer } from 'testcontainers/dist/test-container'
-import { GenericContainer } from 'testcontainers'
 import mysql, { Connection, RowDataPacket } from 'mysql2/promise'
+import { GenericContainer } from 'testcontainers'
+import { StartedTestContainer } from 'testcontainers/dist/test-container'
+
+import { create, drop, migrate } from '../lib'
 
 const selectTableNames = async (conn: Connection, database: string): Promise<string[]> => {
   const [rows] = await conn.query<RowDataPacket[]>(

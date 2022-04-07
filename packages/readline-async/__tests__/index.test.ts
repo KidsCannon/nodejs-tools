@@ -1,6 +1,7 @@
-import { readlineAsync } from '../lib'
 import fs from 'fs'
 import path from 'path'
+
+import { readlineAsync } from '../lib'
 
 describe('readline-async', () => {
   it ('works', async () => {

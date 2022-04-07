@@ -1,5 +1,6 @@
-import { ConnectionConfig } from './types'
 import mysql, { Connection } from 'mysql2/promise'
+
+import { ConnectionConfig } from './types'
 
 export class MysqlInvoker {
   constructor(public config: ConnectionConfig) {}
