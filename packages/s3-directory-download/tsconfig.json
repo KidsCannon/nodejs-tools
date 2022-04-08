@@ -1,0 +1,23 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist/cjs"
+  },
+  "include": [
+    "lib"
+  ],
+  "exclude": [
+    "dist"
+  ],
+  "references": [
+    {
+      "path": "../not-empty"
+    },
+    {
+      "path": "../paginate"
+    },
+    {
+      "path": "../ls-recursive"
+    }
+  ]
+}
