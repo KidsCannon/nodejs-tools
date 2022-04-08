@@ -74,10 +74,14 @@ if (isPublish) {
 for (const pkgName of resolved) {
   const pkg = packages[pkgName]
   if (publishedVersion[pkg.name] === pkg.version) continue
-
   if (isPublish) {
+    await $`git tag -a ${pkgName}-v${pkg.version} -m "${pkgName} v${pkg.version}"`
     $`npm publish -w ${pkgName}`
   } else {
     console.log(`  ${pkg.name}: ${publishedVersion[pkg.name]} -> ${pkg.version}`)
   }
+}
+
+if (isPublish) {
+  await $`git push --tags`
 }
