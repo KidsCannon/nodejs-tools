@@ -1,13 +1,14 @@
-# `@kidscannon/ls-recursive`
+# `@kidscannon/s3-directory-download`
 
 ## Install
 
 ```
-$ npm i @kidscannon/ls-recursive
+$ npm i @kidscannon/s3-directory-download
 ```
 
 ## Usage
 
 ```
-await lsRecursive('/directory')
+const client = new S3Client({})
+await s3DirectoryDownload({ client, bucket: 'testx', prefix: 'p' }, '/directory')
 ```
