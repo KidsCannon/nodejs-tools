@@ -7,6 +7,12 @@
   "exclude": ["dist"],
   "references": [
     {
+      "path": "../not-empty"
+    },
+    {
+      "path": "../paginate"
+    },
+    {
       "path": "../ls-recursive"
     }
   ]

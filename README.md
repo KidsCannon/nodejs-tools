@@ -11,14 +11,24 @@ $ npm run clean # clean build artifacts
 
 ## RELEASE
 
-bump version:
+### 1. bump version:
+
+Edit packages/\*/package.json
+
+### 2. commit
 
 ```
-$ npx zx scripts/bump.mjs major|minor|patch
+$ git add -A && git commit -m 'Bump versions'
 ```
 
-publish to npm:
+### 3. check packages that will be published
 
 ```
-$ npx zx scripts/publish.mjs
+$ npx zx scripts/version-manager.mjs
+```
+
+### 4. publish
+
+```
+$ npx zx scripts/version-manager.mjs --publish
 ```

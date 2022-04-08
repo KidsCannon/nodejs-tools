@@ -3,12 +3,8 @@
   "compilerOptions": {
     "outDir": "./dist/cjs"
   },
-  "include": [
-    "bin"
-  ],
-  "exclude": [
-    "dist"
-  ],
+  "include": ["bin"],
+  "exclude": ["dist"],
   "references": [
     {
       "path": "../mysql-migrate"
