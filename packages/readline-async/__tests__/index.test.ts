@@ -4,11 +4,14 @@ import path from 'path'
 import { readlineAsync } from '../lib'
 
 describe('readline-async', () => {
-  it ('works', async () => {
+  it('works', async () => {
     let data = ''
-    await readlineAsync({ input: fs.createReadStream(path.join(__dirname, 'testdata', '01.txt')), terminal: false }, (line) => {
-      data += line + "\n"
-    })
-    expect(data).toEqual("aaa\nbbb\nccc\n01\n")
+    await readlineAsync(
+      { input: fs.createReadStream(path.join(__dirname, 'testdata', '01.txt')), terminal: false },
+      (line) => {
+        data += line + '\n'
+      },
+    )
+    expect(data).toEqual('aaa\nbbb\nccc\n01\n')
   })
 })

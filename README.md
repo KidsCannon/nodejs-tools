@@ -13,8 +13,7 @@ $ npm run clean # clean build artifacts
 
 ### 1. bump version:
 
-Edit packages/*/package.json
-
+Edit packages/\*/package.json
 
 ### 2. commit
 

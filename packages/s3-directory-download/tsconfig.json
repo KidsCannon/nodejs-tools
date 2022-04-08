@@ -3,12 +3,8 @@
   "compilerOptions": {
     "outDir": "./dist/cjs"
   },
-  "include": [
-    "lib"
-  ],
-  "exclude": [
-    "dist"
-  ],
+  "include": ["lib"],
+  "exclude": ["dist"],
   "references": [
     {
       "path": "../not-empty"

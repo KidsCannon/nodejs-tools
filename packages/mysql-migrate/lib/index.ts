@@ -1,4 +1,4 @@
-import { createReadStream,readdirSync } from 'fs'
+import { createReadStream, readdirSync } from 'fs'
 import path from 'path'
 
 import { buildCreateDatabaseSql } from './build-create-database-sql'

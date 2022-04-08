@@ -18,14 +18,14 @@ for (const pkg of Object.values(packages)) {
   }
 }
 if (versionCheckErrors.length > 0) {
-  versionCheckErrors.forEach(error => console.log(error.toString()))
+  versionCheckErrors.forEach((error) => console.log(error.toString()))
   process.exit(1)
 }
 
 // sort for publish
 const isDepsFree = (pkg, packages, resolved) => {
   const deps = getInternalDeps(pkg, packages)
-  return deps.filter(dep => !resolved.has(dep)).length === 0
+  return deps.filter((dep) => !resolved.has(dep)).length === 0
 }
 const resolved = new Set()
 while (resolved.size !== Object.values(packages).length) {
@@ -50,9 +50,13 @@ const getPublishedVersion = async (pkg) => {
     }
   }
 }
-const publishedVersion = Object.fromEntries(await Promise.all(Array.from(resolved).map(async pkg => {
-  return [pkg, await getPublishedVersion(pkg)]
-})))
+const publishedVersion = Object.fromEntries(
+  await Promise.all(
+    Array.from(resolved).map(async (pkg) => {
+      return [pkg, await getPublishedVersion(pkg)]
+    }),
+  ),
+)
 
 $.verbose = true
 if (isPublish) {
