@@ -28,7 +28,7 @@ export const s3DirectoryDownload = async (
     await Promise.all(
       keys.map((key) =>
         limit(async () => {
-          const filePath = path.join(destination, key)
+          const filePath = path.join(destination, path.relative(source.prefix, key))
           await mkdirp(path.dirname(filePath))
           const w = fs.createWriteStream(filePath, { flags: 'w' })
           const res = await source.client.send(
