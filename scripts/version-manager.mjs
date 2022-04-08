@@ -69,8 +69,8 @@ if (isPublish) {
   // Ensure all changes are committed
   await $`git diff`
 
-  $`npm run clean`
-  $`npm run build`
+  await $`npm run clean`
+  await $`npm run build`
 } else {
   console.log(`Publish plan:`)
 }
@@ -79,8 +79,8 @@ for (const pkgName of resolved) {
   const pkg = packages[pkgName]
   if (publishedVersion[pkg.name] === pkg.version) continue
   if (isPublish) {
-    await $`git tag -a ${pkgName}-v${pkg.version} -m "${pkgName} v${pkg.version}"`
-    $`npm publish -w ${pkgName}`
+    await $`git tag -f -a ${pkgName}-v${pkg.version} -m "${pkgName} v${pkg.version}"`
+    await $`npm publish -w ${path.dirname(pkg.packageJsonPath)}`
   } else {
     console.log(`  ${pkg.name}: ${publishedVersion[pkg.name]} -> ${pkg.version}`)
   }

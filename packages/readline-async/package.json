@@ -40,5 +40,8 @@
   "bugs": {
     "url": "https://github.com/KidsCannon/nodejs-tools/issues"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
 }
