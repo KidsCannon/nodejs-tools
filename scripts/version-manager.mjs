@@ -6,13 +6,13 @@ const isPublish = process.argv.includes('--publish')
 
 const packages = getPackageInfos('.')
 
-// check version mismatch
+// check version missmatch
 const versionCheckErrors = []
 for (const pkg of Object.values(packages)) {
   for (const dep of Object.keys(pkg.dependencies)) {
     if (dep.startsWith('@kidscannon/')) {
-      if (pkg.dependencies[dep] !== pkg.version) {
-        versionCheckErrors.push(new Error(`version mismatch: ${pkg} -> ${dep}`))
+      if (pkg.dependencies[dep] !== packages[dep].version) {
+        versionCheckErrors.push(new Error(`version mismatch: ${pkg.name} -> ${dep}`))
       }
     }
   }
