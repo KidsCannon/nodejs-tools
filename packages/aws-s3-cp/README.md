@@ -3,7 +3,7 @@
 ## Install
 
 ```
-$ npm i @kidscannon/aws-s3-cp`
+$ npm i @kidscannon/aws-s3-cp
 ```
 
 ## Usage

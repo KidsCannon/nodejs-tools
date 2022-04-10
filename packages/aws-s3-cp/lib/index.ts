@@ -74,9 +74,15 @@ const get = async (source: Resource): Promise<Readable> => {
   }
 }
 
-const put = async (source: Readable, destination: Resource): Promise<void> => {
+const put = async (source: Readable, destination: Resource, dirCache: Set<string>): Promise<void> => {
   if (typeof destination === 'string') {
-    await fsPromises.mkdir(path.dirname(destination), { recursive: true })
+    const dir = path.dirname(destination)
+    if (!dirCache.has(dir)) {
+      if (!fs.existsSync(dir)) {
+        await fsPromises.mkdir(dir, { recursive: true })
+      }
+      dirCache.add(dir)
+    }
     const w = fs.createWriteStream(destination, { flags: 'w' })
     await new Promise<void>((resolve, reject) => {
       return source
@@ -123,6 +129,7 @@ export const awsS3Cp = async (
     : params.destination
   const opts = params.options
 
+  const dirCache = new Set<string>()
   if (opts?.recursive) {
     for await (const sources of list(src)) {
       await Promise.all(
@@ -132,9 +139,10 @@ export const awsS3Cp = async (
             const rel = path.relative(pathOf(src), pathOf(source))
 
             if (typeof dst === 'string') {
-              await put(stream, path.join(dst, rel))
+              const fp = path.join(dst, rel)
+              await put(stream, fp, dirCache)
             } else {
-              await put(stream, { ...dst, key: path.join(dst.key, rel) })
+              await put(stream, { ...dst, key: path.join(dst.key, rel) }, dirCache)
             }
           })
         }),
@@ -142,6 +150,6 @@ export const awsS3Cp = async (
     }
   } else {
     const stream = await get(src)
-    await put(stream, dst)
+    await put(stream, dst, dirCache)
   }
 }
