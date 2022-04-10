@@ -1,6 +1,6 @@
 {
   "name": "@kidscannon/aws-s3-cp",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "aws cp",
   "keywords": [
     "s3"
