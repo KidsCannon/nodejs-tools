@@ -10,7 +10,7 @@ import { lsRecursive } from '@kidscannon/ls-recursive'
 import { notEmpty } from '@kidscannon/not-empty'
 import { paginate } from '@kidscannon/paginate'
 import fs from 'fs'
-import mkdirp from 'mkdirp'
+import fsPromises from 'fs/promises'
 import pLimit from 'p-limit'
 import path from 'path'
 import { Readable } from 'stream'
@@ -76,7 +76,7 @@ const get = async (source: Resource): Promise<Readable> => {
 
 const put = async (source: Readable, destination: Resource): Promise<void> => {
   if (typeof destination === 'string') {
-    await mkdirp(path.dirname(destination))
+    await fsPromises.mkdir(path.dirname(destination), { recursive: true })
     const w = fs.createWriteStream(destination, { flags: 'w' })
     await new Promise<void>((resolve, reject) => {
       return source
