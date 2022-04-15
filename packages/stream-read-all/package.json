@@ -1,6 +1,6 @@
 {
   "name": "@kidscannon/stream-read-all",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "read all data from stream",
   "keywords": [
     "stream"

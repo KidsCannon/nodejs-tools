@@ -1,6 +1,6 @@
 {
   "name": "@kidscannon/mysql-migrate",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "MySQL schema migration",
   "keywords": [
     "MySQL",

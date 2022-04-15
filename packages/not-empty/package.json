@@ -1,6 +1,6 @@
 {
   "name": "@kidscannon/not-empty",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "ensure not null | undefined",
   "keywords": [
     "null"

@@ -1,6 +1,6 @@
 {
   "name": "@kidscannon/gunzip-r",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "gunzip files in the directory",
   "keywords": [
     "gunzip"
@@ -27,7 +27,7 @@
     "clean": "node -e 'fs.rmSync(`dist`, { recursive:true, force:true })'"
   },
   "dependencies": {
-    "@kidscannon/ls-recursive": "0.0.1",
+    "@kidscannon/ls-recursive": "0.0.2",
     "p-limit": "^3.1.0"
   },
   "jest": {

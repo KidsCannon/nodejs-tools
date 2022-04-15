@@ -1,6 +1,6 @@
 {
   "name": "@kidscannon/mysql-migrate-cli",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "MySQL schema migration CLI",
   "keywords": [
     "MySQL",
@@ -29,7 +29,7 @@
     "clean": "node -e 'fs.rmSync(`dist`, { recursive:true, force:true })'"
   },
   "dependencies": {
-    "@kidscannon/mysql-migrate": "0.0.3",
+    "@kidscannon/mysql-migrate": "0.0.4",
     "arg": "^5.0.1"
   },
   "devDependencies": {},
