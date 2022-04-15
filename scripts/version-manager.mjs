@@ -12,7 +12,11 @@ for (const pkg of Object.values(packages)) {
   for (const dep of Object.keys(pkg.dependencies)) {
     if (dep.startsWith('@kidscannon/')) {
       if (pkg.dependencies[dep] !== packages[dep].version) {
-        versionCheckErrors.push(new Error(`version mismatch: ${pkg.name} -> ${dep}: expected ${packages[dep].version} but got ${pkg.dependencies[dep]}`))
+        versionCheckErrors.push(
+          new Error(
+            `version mismatch: ${pkg.name} -> ${dep}: expected ${packages[dep].version} but got ${pkg.dependencies[dep]}`,
+          ),
+        )
       }
     }
   }
