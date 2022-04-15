@@ -12,7 +12,7 @@
     "directory": "packages/gzip-r"
   },
   "main": "dist/cjs/lib/index.js",
-  "types": "dist/cjs/lib/index.d.js",
+  "types": "dist/cjs/lib/index.d.ts",
   "module": "dist/esm/lib/index.js",
   "directories": {
     "lib": "dist",
