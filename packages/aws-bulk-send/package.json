@@ -1,0 +1,51 @@
+{
+  "name": "@kidscannon/aws-bulk-send",
+  "version": "0.0.1",
+  "description": "aws bulk send",
+  "keywords": [
+    "aws",
+    "bulk"
+  ],
+  "homepage": "https://github.com/KidsCannon/nodejs-tools/tree/main/packages/aws-bulk-send",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KidsCannon/nodejs-tools.git",
+    "directory": "packages/aws-s3-bulk-get"
+  },
+  "main": "dist/cjs/lib/index.js",
+  "types": "dist/cjs/lib/index.d.ts",
+  "module": "dist/esm/lib/index.js",
+  "directories": {
+    "lib": "dist",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "test": "jest --verbose",
+    "build": "tsc -b && tsc -b tsconfig.esm.json",
+    "clean": "node -e 'fs.rmSync(`dist`, { recursive:true, force:true })'"
+  },
+  "dependencies": {
+    "p-limit": "^3.1.0"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "roots": [
+      "<rootDir>/__tests__"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/KidsCannon/nodejs-tools/issues"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@aws-sdk/client-s3": "^3.100.0",
+    "aws-sdk-client-mock": "^0.6.2"
+  }
+}
