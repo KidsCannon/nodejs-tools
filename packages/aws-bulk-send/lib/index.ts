@@ -1,4 +1,4 @@
-import { Command } from '@aws-sdk/smithy-client'
+import type { Command } from '@aws-sdk/smithy-client'
 import pLimit from 'p-limit'
 
 interface Client<Input, Output> {
