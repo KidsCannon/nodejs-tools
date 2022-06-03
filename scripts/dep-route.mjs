@@ -4,7 +4,9 @@ import path from 'path'
 $.verbose = false
 
 const format = (packageLockJson, target) => {
-  const p = target.startsWith('packages/') ? packageLockJson.packages[target] : packageLockJson.packages[`node_modules/${target}`]
+  const p = target.startsWith('packages/')
+    ? packageLockJson.packages[target]
+    : packageLockJson.packages[`node_modules/${target}`]
   return `${target}@${p.version}`
 }
 
