@@ -1,6 +1,6 @@
 {
   "name": "@kidscannon/aws-bulk-send",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "aws bulk send",
   "keywords": [
     "aws",
