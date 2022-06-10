@@ -26,11 +26,11 @@ export const awsBulkSendT = async <Input, Output, TransformedOutput>({
 }: {
   client: Client<Input, Output>
   commands: Command<Input, Output, unknown>[]
-  transformer: (output: Output) => TransformedOutput
+  transformer: (input: Input, output: Output) => TransformedOutput
   options?: { concurrency?: number }
 }): Promise<[Input, TransformedOutput][]> => {
   const limit = pLimit(options?.concurrency ?? 1000)
   return Promise.all(
-    commands.map(async (cmd) => [cmd.input, await limit(async () => transformer(await client.send(cmd)))]),
+    commands.map(async (cmd) => [cmd.input, await limit(async () => transformer(cmd.input, await client.send(cmd)))]),
   )
 }

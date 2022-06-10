@@ -58,7 +58,7 @@ describe('awsBulkSendT', () => {
     const client = new S3Client({})
     const res = await awsBulkSendT({
       client,
-      transformer: (output: GetObjectCommandOutput) => {
+      transformer: (input, output: GetObjectCommandOutput) => {
         return { $metadata, Body: `transformed-${output.Body}` }
       },
       commands: [
