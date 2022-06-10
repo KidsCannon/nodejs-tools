@@ -69,27 +69,36 @@ if (isPublish) {
     console.log('Error: bump should be executed in main branch')
     process.exit(1)
   }
-
   // Ensure all changes are committed
   await $`git diff`
-
-  await $`npm run clean`
-  await $`npm run build`
-} else {
-  console.log(`Publish plan:`)
 }
+
+await $`npm run clean`
+await $`npm run build`
+
+const output = []
 
 for (const pkgName of resolved) {
   const pkg = packages[pkgName]
   if (publishedVersion[pkg.name] === pkg.version) continue
+  output.push(`  ${pkg.name}: ${publishedVersion[pkg.name]} -> ${pkg.version}`)
   if (isPublish) {
     await $`git tag -f -a ${pkgName}-v${pkg.version} -m "${pkgName} v${pkg.version}"`
     await $`npm publish -w ${path.dirname(pkg.packageJsonPath)}`
   } else {
-    console.log(`  ${pkg.name}: ${publishedVersion[pkg.name]} -> ${pkg.version}`)
+    await $`npm publish -w ${path.dirname(pkg.packageJsonPath)} --dry-run`
   }
 }
 
-if (isPublish) {
-  await $`git push --tags`
+if (output.length === 0) {
+  console.log(`Publish plan:`)
+  console.log(' Nothing')
+} else {
+  if (isPublish) {
+    await $`git push --tags`
+  }
+  console.log(`Publish plan:`)
+  for (const line of output) {
+    console.log(line)
+  }
 }

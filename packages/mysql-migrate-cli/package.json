@@ -17,9 +17,6 @@
     "lib": "dist",
     "test": "__tests__"
   },
-  "files": [
-    "dist/"
-  ],
   "bin": {
     "mysql-migrate": "dist/cjs/bin/mysql-migrate-cli.js"
   },
