@@ -19,9 +19,6 @@
     "lib": "dist/lib",
     "test": "__tests__"
   },
-  "files": [
-    "dist/"
-  ],
   "scripts": {
     "test": "jest --verbose",
     "build": "tsc -b && tsc -b tsconfig.esm.json",
