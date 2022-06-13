@@ -37,18 +37,9 @@ describe('awsBulkSend', () => {
     })
 
     expect(res).toEqual([
-      [
-        { Bucket: 'B1', Key: 'K1' },
-        { $metadata, Body: 'B1-K1' },
-      ],
-      [
-        { Bucket: 'B3', Key: 'K3' },
-        { $metadata, Body: 'B3-K3' },
-      ],
-      [
-        { Bucket: 'B2', Key: 'K2' },
-        { $metadata, Body: 'B2-K2' },
-      ],
+      { $metadata, Body: 'B1-K1' },
+      { $metadata, Body: 'B3-K3' },
+      { $metadata, Body: 'B2-K2' },
     ])
   })
 })
@@ -59,7 +50,7 @@ describe('awsBulkSendT', () => {
     const res = await awsBulkSendT({
       client,
       transformer: (input, output: GetObjectCommandOutput) => {
-        return { $metadata, Body: `transformed-${output.Body}` }
+        return [input, { $metadata, Body: `transformed-${output.Body}` }]
       },
       commands: [
         new GetObjectCommand({ Bucket: 'B1', Key: 'K1' }),

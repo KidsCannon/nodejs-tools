@@ -13,9 +13,9 @@ export const awsBulkSend = async <Input, Output>({
   client: Client<Input, Output>
   commands: Command<Input, Output, unknown>[]
   options?: { concurrency?: number }
-}): Promise<[Input, Output][]> => {
+}): Promise<Output[]> => {
   const limit = pLimit(options?.concurrency ?? 1000)
-  return Promise.all(commands.map(async (cmd) => [cmd.input, await limit(() => client.send(cmd))]))
+  return Promise.all(commands.map((cmd) => limit(() => client.send(cmd))))
 }
 
 export const awsBulkSendT = async <Input, Output, TransformedOutput>({
@@ -28,9 +28,9 @@ export const awsBulkSendT = async <Input, Output, TransformedOutput>({
   commands: Command<Input, Output, unknown>[]
   transformer: (input: Input, output: Output) => TransformedOutput
   options?: { concurrency?: number }
-}): Promise<[Input, TransformedOutput][]> => {
+}): Promise<TransformedOutput[]> => {
   const limit = pLimit(options?.concurrency ?? 1000)
   return Promise.all(
-    commands.map(async (cmd) => [cmd.input, await limit(async () => transformer(cmd.input, await client.send(cmd)))]),
+    commands.map((cmd) =>limit(async () => transformer(cmd.input, await client.send(cmd)))),
   )
 }
